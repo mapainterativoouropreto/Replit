@@ -15,15 +15,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 e.preventDefault();
             }, { passive: false });
 
-            const wheelZoom = WZoom.create(container, {
-                type: 'html',
-                width: container.clientWidth,
-                height: container.clientHeight,
-                minScale: 0.5,
+            const wheelZoom = WZoom.create(map, {
                 maxScale: 10,
-                speed: 1,
+                speed: 0.1,
                 zoomOnClick: true,
-                // Enable zoom with mouse wheel
                 zoomWithWheel: true,
                 dragScrollableOptions: {
                     onGrab: () => {
