@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mapas de Ouro Preto</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
     <style>
         :root {
-            --primary-color: #c5ac67;
-            --text-color: #333;
-            --border-color: #000;
+            --primary-color: #2c1810;
+            --secondary-color: #c5ac67;
+            --text-color: #fff;
+            --border-color: #4a2c1c;
         }
 
         body {
@@ -44,8 +46,14 @@
             text-align: center;
             font-size: 2.5rem;
             margin-bottom: 30px;
-            color: #2c1810;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+            color: var(--secondary-color);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            text-align: center;
+            margin-bottom: 25px;
         }
 
         .sumario-container {
@@ -57,10 +65,11 @@
 
         .sumario-section {
             flex: 1;
-            background: rgba(255, 255, 255, 0.9);
+            background: rgba(44, 24, 16, 0.8);
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
         }
 
         .sumario {
@@ -73,7 +82,7 @@
         }
 
         .coluna a {
-            color: #2c1810;
+            color: var(--secondary-color);
             text-decoration: none;
             transition: all 0.3s;
             display: block;
@@ -82,55 +91,46 @@
         }
 
         .coluna a:hover {
-            background-color: rgba(44, 24, 16, 0.1);
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
             transform: translateX(5px);
         }
 
         .mapa {
-            background: white;
+            background: rgba(44, 24, 16, 0.8);
             padding: 20px;
             margin: 30px 0;
             border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        }
+
+        .mapa h3 {
+            color: var(--secondary-color);
+            text-align: center;
+            margin-bottom: 20px;
         }
 
         .mapa-container {
             position: relative;
             overflow: hidden;
-            border: 5px solid var(--border-color);
+            border: 3px solid var(--secondary-color);
             border-radius: 5px;
-            background: white;
             margin: 0 auto;
             text-align: center;
-            height: 600px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .mapa-container:hover {
+            transform: scale(1.02);
         }
 
         .mapa img {
             max-width: 100%;
-            height: 100%;
-            object-fit: contain;
-            cursor: zoom-in;
-            transition: transform 0.2s;
-        }
-
-        .mapa-container::before {
-            content: "Use o scroll do mouse para dar zoom";
-            position: absolute;
-            top: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: rgba(0, 0, 0, 0.7);
-            color: white;
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-size: 0.8rem;
-            z-index: 100;
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-
-        .mapa-container:hover::before {
-            opacity: 1;
+            height: auto;
+            display: block;
+            margin: 0 auto;
         }
 
         .bairros {
@@ -142,17 +142,20 @@
         }
 
         .bairros a {
-            background-color: #2c1810;
-            color: white;
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
             padding: 8px 15px;
             border-radius: 5px;
             text-decoration: none;
             transition: all 0.3s;
+            font-weight: 600;
         }
 
         .bairros a:hover {
             background-color: var(--primary-color);
+            color: var(--secondary-color);
             transform: translateY(-2px);
+            border: 1px solid var(--secondary-color);
         }
 
         @media (max-width: 768px) {
@@ -179,28 +182,65 @@
 
         <div class="sumario-container">
             <div class="sumario-section">
-                <h2 class="text-center mb-4">Ouro Preto (Sede)</h2>
+                <h2>Ouro Preto (Sede)</h2>
                 <div class="sumario">
                     <div class="coluna">
-                        {% for bairro in bairros_sede_1 %}
-                        <a href="#{{ bairro.mapa }}">{{ bairro.nome }}</a>
-                        {% endfor %}
+                        <a href="#mapa1">Água Limpa</a>
+                        <a href="#mapa3">Alta da Cruz</a>
+                        <a href="#mapa5">Alto das Dores</a>
+                        <a href="#mapa3">Antônio Dias</a>
+                        <a href="#mapa3">Barra</a>
+                        <a href="#mapa6">Bauxita</a>
+                        <a href="#mapa1">Cabeças</a>
+                        <a href="#mapa5">Caminho da Fábrica</a>
+                        <a href="#mapa4">Campo Grande de Vila Rica</a>
+                        <a href="#mapa2">Centro</a>
+                        <a href="#mapa1">Jardim Alvorada</a>
+                        <a href="#mapa7">Jardim Itacolomi</a>
+                        <a href="#mapa6">Lagoa</a>
+                        <a href="#mapa8">Maria Soares</a>
+                        <a href="#mapa3">Morro da Queimada</a>
+                        <a href="#mapa4">Morro São João</a>
                     </div>
                     <div class="coluna">
-                        {% for bairro in bairros_sede_2 %}
-                        <a href="#{{ bairro.mapa }}">{{ bairro.nome }}</a>
-                        {% endfor %}
+                        <a href="#mapa1">Morro São Sebastião</a>
+                        <a href="#mapa7">Nossa Senhora do Carmo</a>
+                        <a href="#mapa7">Novo Horizonte</a>
+                        <a href="#mapa5">Padre Faria</a>
+                        <a href="#mapa1">Passa Dez (Cima e Baixo)</a>
+                        <a href="#mapa4">Piedade</a>
+                        <a href="#mapa1">Pilar</a>
+                        <a href="#mapa1">Rosário</a>
+                        <a href="#mapa5">Santa Cruz</a>
+                        <a href="#mapa8">Saramenha</a>
+                        <a href="#mapa1">São Cristovão</a>
+                        <a href="#mapa1">São Francisco</a>
+                        <a href="#mapa4">Taquaral</a>
+                        <a href="#mapa8">Tavares</a>
+                        <a href="#mapa6">Vila Aparecida</a>
+                        <a href="#mapa6">Vila dos Engenheiros</a>
+                        <a href="#mapa6">Vila Operária</a>
+                        <a href="#mapa8">Vila Santa Izabel</a>
+                        <a href="#mapa1">Vila São José</a>
                     </div>
                 </div>
             </div>
 
             <div class="sumario-section">
-                <h2 class="text-center mb-4">Distritos</h2>
+                <h2>Distritos</h2>
                 <div class="sumario">
                     <div class="coluna">
-                        {% for distrito in distritos %}
-                        <a href="#{{ distrito.mapa }}">{{ distrito.nome }}</a>
-                        {% endfor %}
+                        <a href="#mapa14">Amarantina</a>
+                        <a href="#mapa9">Cachoeira do Campo</a>
+                        <a href="#mapa15">Engenheiro Correia</a>
+                        <a href="#mapa12">Glaura</a>
+                        <a href="#mapa18">Lavras Novas</a>
+                        <a href="#mapa19">Miguel Burnier</a>
+                        <a href="#mapa16">Rodrigo Silva</a>
+                        <a href="#mapa17">Santa Rita de Ouro Preto</a>
+                        <a href="#mapa11">Santo Ântonio do Leite</a>
+                        <a href="#mapa13">Santo Ântonio do Salto</a>
+                        <a href="#mapa10">São Bartolomeu</a>
                     </div>
                 </div>
             </div>
@@ -208,7 +248,7 @@
 
         {% for i in range(1, 20) %}
         <div class="mapa" id="mapa{{ i }}">
-            <h3 class="text-center mb-4">
+            <h3>
                 {% if i > 8 %}
                     Mapa {{ i }} - 
                     {% if i == 9 %}Cachoeira do Campo
@@ -228,10 +268,12 @@
                 {% endif %}
             </h3>
             <div class="mapa-container">
-                <img src="{{ url_for('static', filename='images/mapa' + i|string + '.png') }}" 
-                     alt="Mapa {{ i }}"
-                     class="panzoom-image"
-                     data-mapa-id="{{ i }}">
+                <a href="{{ url_for('static', filename='images/mapa' + i|string + '.png') }}" 
+                   data-fancybox="gallery"
+                   data-caption="Mapa {{ i }}">
+                    <img src="{{ url_for('static', filename='images/mapa' + i|string + '.png') }}" 
+                         alt="Mapa {{ i }}">
+                </a>
             </div>
             <div class="bairros">
                 {% if i <= 8 %}
@@ -244,44 +286,25 @@
         {% endfor %}
     </div>
 
-    <script src="https://unpkg.com/@panzoom/panzoom/dist/panzoom.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const containers = document.querySelectorAll('.mapa-container');
-
-            containers.forEach(container => {
-                const img = container.querySelector('.panzoom-image');
-                const panzoom = Panzoom(img, {
-                    maxScale: 5,
-                    minScale: 1,
-                    contain: 'inside',
-                    cursor: 'move',
-                    step: 0.1
-                });
-
-                // Previne o scroll da página quando usando o zoom
-                container.addEventListener('wheel', function(e) {
-                    if (e.deltaY !== 0) {
-                        e.preventDefault();
-                        panzoom.zoomWithWheel(e);
-                    }
-                });
-
-                // Reset do zoom com duplo clique
-                img.addEventListener('dblclick', function(e) {
-                    e.preventDefault();
-                    panzoom.reset();
-                });
-
-                // Atualiza o cursor baseado no estado
-                img.addEventListener('panzoomstart', () => {
-                    img.style.cursor = 'grabbing';
-                });
-
-                img.addEventListener('panzoomend', () => {
-                    img.style.cursor = 'grab';
-                });
-            });
+        Fancybox.bind("[data-fancybox]", {
+            // Opções do Fancybox
+            Image: {
+                zoom: true,
+            },
+            Toolbar: {
+                display: {
+                    left: [],
+                    middle: [],
+                    right: ["close"],
+                },
+            },
+            click: null,
+            wheel: "zoom",
+            Thumbs: false,
+            showClass: "fancybox-zoomIn",
+            hideClass: "fancybox-zoomOut",
         });
     </script>
 </body>
