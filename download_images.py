@@ -16,6 +16,15 @@ def download_file_from_drive(file_id, destination):
     session = requests.Session()
     response = session.get(URL, params={'id': file_id}, stream=True)
 
+    # Check if there's a download warning (for large files)
+    if 'content-disposition' not in response.headers:
+        # Get the confirmation token
+        for key, value in response.cookies.items():
+            if key.startswith('download_warning'):
+                params = {'id': file_id, 'confirm': value}
+                response = session.get(URL, params=params, stream=True)
+                break
+
     if response.status_code == 200:
         with open(destination, 'wb') as f:
             for chunk in response.iter_content(chunk_size=32768):
