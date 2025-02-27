@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapas de Ouro Preto</title>
+    <link href="https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #c5ac67;
+            --text-color: var(--bs-body-color);
+            --border-color: var(--bs-border-color);
+        }
+
+        body {
+            font-family: var(--bs-body-font-family);
+            margin: 0;
+            padding: 20px;
+            background-color: var(--primary-color);
+            color: var(--text-color);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            position: relative;
+            margin-bottom: 40px;
+        }
+
+        .logo {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 225px;
+            height: auto;
+            z-index: 100;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #2c1810;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        .sumario-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .sumario-section {
+            flex: 1;
+            background: var(--bs-body-bg);
+            padding: 20px;
+            border-radius: var(--bs-border-radius-lg);
+            box-shadow: var(--bs-box-shadow);
+        }
+
+        .sumario {
+            display: flex;
+            gap: 30px;
+        }
+
+        .coluna {
+            flex: 1;
+        }
+
+        .coluna a {
+            color: var(--bs-primary);
+            text-decoration: none;
+            transition: all 0.3s;
+            display: block;
+            padding: 8px 12px;
+            border-radius: var(--bs-border-radius-sm);
+        }
+
+        .coluna a:hover {
+            background-color: var(--bs-primary);
+            color: var(--bs-light);
+            transform: translateX(5px);
+        }
+
+        .mapa {
+            background: var(--bs-body-bg);
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: var(--bs-border-radius-lg);
+            box-shadow: var(--bs-box-shadow);
+        }
+
+        .mapa-container {
+            position: relative;
+            overflow: hidden;
+            border: 5px solid var(--border-color);
+            border-radius: var(--bs-border-radius);
+            cursor: move;
+        }
+
+        .mapa img {
+            width: 100%;
+            max-width: 900px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .bairros {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .bairros a {
+            background-color: var(--bs-primary);
+            color: var(--bs-light);
+            padding: 8px 15px;
+            border-radius: var(--bs-border-radius);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .bairros a:hover {
+            background-color: var(--bs-primary-dark);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .sumario-container {
+                flex-direction: column;
+            }
+
+            .logo {
+                position: relative;
+                margin: 0 auto 20px;
+                display: block;
+                top: 0;
+                right: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" class="logo">
+            <h1>Sumário de Mapas (A-Z)</h1>
+        </div>
+
+        <div class="sumario-container">
+            <div class="sumario-section">
+                <h2 class="text-center mb-4">Ouro Preto (Sede)</h2>
+                <div class="sumario">
+                    <div class="coluna">
+                        <a href="#mapa1">Água Limpa</a>
+                        <a href="#mapa3">Alta da Cruz</a>
+                        <a href="#mapa5">Alto das Dores</a>
+                        <a href="#mapa3">Antônio Dias</a>
+                        <a href="#mapa3">Barra</a>
+                        <a href="#mapa6">Bauxita</a>
+                        <a href="#mapa1">Cabeças</a>
+                        <a href="#mapa5">Caminho da Fábrica</a>
+                        <a href="#mapa4">Campo Grande de Vila Rica</a>
+                        <a href="#mapa2">Centro</a>
+                    </div>
+                    <div class="coluna">
+                        <a href="#mapa1">Jardim Alvorada</a>
+                        <a href="#mapa7">Jardim Itacolomi</a>
+                        <a href="#mapa6">Lagoa</a>
+                        <a href="#mapa8">Maria Soares</a>
+                        <a href="#mapa3">Morro da Queimada</a>
+                        <a href="#mapa4">Morro São João</a>
+                        <a href="#mapa1">Morro São Sebastião</a>
+                        <a href="#mapa7">Nossa Senhora do Carmo</a>
+                        <a href="#mapa7">Novo Horizonte</a>
+                        <a href="#mapa5">Padre Faria</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sumario-section">
+                <h2 class="text-center mb-4">Distritos</h2>
+                <div class="sumario">
+                    <div class="coluna">
+                        <a href="#mapa14">Amarantina</a>
+                        <a href="#mapa9">Cachoeira do Campo</a>
+                        <a href="#mapa15">Engenheiro Correia</a>
+                        <a href="#mapa12">Glaura</a>
+                        <a href="#mapa18">Lavras Novas</a>
+                        <a href="#mapa19">Miguel Burnier</a>
+                    </div>
+                    <div class="coluna">
+                        <a href="#mapa16">Rodrigo Silva</a>
+                        <a href="#mapa17">Santa Rita de Ouro Preto</a>
+                        <a href="#mapa11">Santo Ântonio do Leite</a>
+                        <a href="#mapa13">Santo Ântonio do Salto</a>
+                        <a href="#mapa10">São Bartolomeu</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Example of one map section - repeat this structure for all maps -->
+        <div class="mapa" id="mapa1">
+            <h3 class="text-center mb-4">Mapa 1</h3>
+            <div class="mapa-container">
+                <img src="{{ url_for('static', filename='images/mapa1.png') }}" alt="Mapa 1" class="zoomable-map">
+            </div>
+            <div class="bairros">
+                <a href="https://docs.google.com/spreadsheets/d/1ZQcR90FsM85UlPPPDmR6ux60KuYqNrQ__8Jpg4x3ivs/edit?hl=pt-br&pli=1&gid=1909247795#gid=1909247795" target="_blank">Água Limpa</a>
+                <!-- Add other bairros links here -->
+            </div>
+        </div>
+
+        <!-- Add other map sections following the same structure -->
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/wheel-zoom@5.1.1/dist/wheel-zoom.min.js"></script>
+    <script src="{{ url_for('static', filename='js/map-zoom.js') }}"></script>
+</body>
+</html>
