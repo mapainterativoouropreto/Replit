@@ -208,19 +208,39 @@
             </div>
         </div>
 
-        <!-- Example of one map section - repeat this structure for all maps -->
-        <div class="mapa" id="mapa1">
-            <h3 class="text-center mb-4">Mapa 1</h3>
+        {% for i in range(1, 20) %}
+        <div class="mapa" id="mapa{{ i }}">
+            <h3 class="text-center mb-4">
+                {% if i > 8 %}
+                    Mapa {{ i }} - 
+                    {% if i == 9 %}Cachoeira do Campo
+                    {% elif i == 10 %}São Bartolomeu
+                    {% elif i == 11 %}Santo Ântonio do Leite
+                    {% elif i == 12 %}Glaura
+                    {% elif i == 13 %}Santo Ântonio do Salto
+                    {% elif i == 14 %}Amarantina
+                    {% elif i == 15 %}Engenheiro Correia
+                    {% elif i == 16 %}Rodrigo Silva
+                    {% elif i == 17 %}Santa Rita de Ouro Preto
+                    {% elif i == 18 %}Lavras Novas
+                    {% elif i == 19 %}Miguel Burnier
+                    {% endif %}
+                {% else %}
+                    Mapa {{ i }}
+                {% endif %}
+            </h3>
             <div class="mapa-container">
-                <img src="{{ url_for('static', filename='images/mapa1.png') }}" alt="Mapa 1" class="zoomable-map">
+                <img src="{{ url_for('static', filename='images/mapa' + i|string + '.png') }}" alt="Mapa {{ i }}" class="zoomable-map">
             </div>
             <div class="bairros">
-                <a href="https://docs.google.com/spreadsheets/d/1ZQcR90FsM85UlPPPDmR6ux60KuYqNrQ__8Jpg4x3ivs/edit?hl=pt-br&pli=1&gid=1909247795#gid=1909247795" target="_blank">Água Limpa</a>
-                <!-- Add other bairros links here -->
+                {% if i <= 8 %}
+                    {% include 'bairros/mapa' + i|string + '.html' %}
+                {% else %}
+                    <a class="botao-mapa" href="https://docs.google.com/spreadsheets/d/1ZQcR90FsM85UlPPPDmR6ux60KuYqNrQ__8Jpg4x3ivs/edit" target="_blank">Ver detalhes</a>
+                {% endif %}
             </div>
         </div>
-
-        <!-- Add other map sections following the same structure -->
+        {% endfor %}
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/wheel-zoom@5.1.1/dist/wheel-zoom.min.js"></script>
