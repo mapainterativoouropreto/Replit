@@ -2,20 +2,27 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('Initializing map zoom functionality...');
 
     // Initialize zoom functionality for all maps
-    const maps = document.querySelectorAll('.zoomable-map');
+    const maps = document.querySelectorAll('.mapa-container');
     console.log(`Found ${maps.length} zoomable maps`);
 
-    maps.forEach((map, index) => {
+    maps.forEach((container, index) => {
+        const map = container.querySelector('img');
         console.log(`Initializing zoom for map ${index + 1}`);
+
         try {
-            const wheelZoom = WZoom.create(map, {
+            // Prevent scroll default behavior when hovering over map
+            container.addEventListener('wheel', function(e) {
+                e.preventDefault();
+            }, { passive: false });
+
+            const wheelZoom = WZoom.create(container, {
                 type: 'html',
-                width: map.clientWidth,
-                height: map.clientHeight,
+                width: container.clientWidth,
+                height: container.clientHeight,
                 minScale: 0.5,
                 maxScale: 10,
-                speed: 0.8,
-                zoomOnClick: false,
+                speed: 1,
+                zoomOnClick: true,
                 // Enable zoom with mouse wheel
                 zoomWithWheel: true,
                 dragScrollableOptions: {
@@ -31,7 +38,8 @@ document.addEventListener('DOMContentLoaded', function() {
             });
 
             // Reset zoom on double click
-            map.addEventListener('dblclick', () => {
+            container.addEventListener('dblclick', (e) => {
+                e.preventDefault();
                 console.log(`Map ${index + 1}: Resetting zoom`);
                 wheelZoom.reset();
             });
