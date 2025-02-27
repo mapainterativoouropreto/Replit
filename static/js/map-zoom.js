@@ -12,10 +12,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 type: 'html',
                 width: map.clientWidth,
                 height: map.clientHeight,
-                minScale: 1,
-                maxScale: 4,
+                minScale: 0.5,
+                maxScale: 10,
                 speed: 0.8,
                 zoomOnClick: false,
+                // Enable zoom with mouse wheel
+                zoomWithWheel: true,
                 dragScrollableOptions: {
                     onGrab: () => {
                         map.style.cursor = 'grabbing';
