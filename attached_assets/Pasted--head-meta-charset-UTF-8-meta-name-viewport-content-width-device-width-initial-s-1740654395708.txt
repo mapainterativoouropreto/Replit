@@ -1,0 +1,330 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapas de Ouro Preto</title>
+    <style>
+        /* Estilo da logo */
+        .logo {
+            position: absolute; /* Posiciona a logo de forma absoluta */
+            top: 20px; /* Distância do topo */
+            right: 20px; /* Distância da direita */
+            width: 225px; /* Largura da logo (ajuste conforme necessário) */
+            height: auto; /* Mantém a proporção da imagem */
+        }
+    
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: rgb(197, 172, 103);
+        }
+
+        h1 {
+            text-align: center; /* Centraliza o título principal */
+        }
+
+        h2 {
+            text-align: left; /* Alinha o subtítulo "Ouro Preto (Sede)" à esquerda */
+            margin-left: 250px; /* Aumenta a margem à esquerda para mover o texto à direita */
+        }
+
+        h2.direita {
+            text-align: right; /* Alinha o texto à direita */
+            margin-right: 450px; /* Aumenta a margem à direita para mover o texto à esquerda */
+            position: absolute; /* Posiciona o subtítulo de forma absoluta */
+            top: 63px; /* Ajuste a distância do topo conforme necessário */
+            right: 0; /* Alinha o subtítulo à direita */
+        }
+
+        h2.centralizado {
+            text-align: center; /* Centraliza apenas o texto "Mapas" */
+            margin-left: 0; /* Remove margem à esquerda */
+            padding-left: 0; /* Remove padding à esquerda */
+        }
+
+        .sumario {
+            display: flex;
+            justify-content: flex-start; /* Alinha as colunas à esquerda */
+            max-width: 800px;
+            margin-left: 100px;
+            gap: 1px; /* Espaçamento entre as colunas */
+        }
+
+        .coluna {
+            width: 45%;
+        }
+
+        .mapa {
+            margin-top: 20px;
+            text-align: center;
+            margin: 0 auto;
+            max-width: 100%;
+        }
+
+        .mapa h3 {
+            text-align: center;
+        }
+
+        img {
+            width: 100%;
+            max-width: 900px;
+            height: auto;
+            border: 5px solid black;
+        }
+
+        .bairros {
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .bairros a {
+            display: block;
+            margin: 5px 0;
+            text-decoration: none;
+            color: #0000EE;
+        }
+
+        .bairros a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <img src="logo.png" alt="Logo" class="logo">
+    <h1>Sumário de Mapas (A-Z)</h1>
+    <h2>Ouro Preto (Sede)</h2>
+    <h2 class="direita">Distritos</h2>
+    <div class="sumario">
+        <div class="coluna">
+            <p><a href="#mapa1">Água Limpa</a></p>
+            <p><a href="#mapa3">Alta da Cruz</a></p>
+            <p><a href="#mapa5">Alto das Dores</a></p>
+            <p><a href="#mapa3">Antônio Dias</a></p>
+            <p><a href="#mapa3">Barra</a></p>
+            <p><a href="#mapa6">Bauxita</a></p>
+            <p><a href="#mapa1">Cabeças</a></p>
+            <p><a href="#mapa5">Caminho da Fábrica</a></p>
+            <p><a href="#mapa4">Campo Grande de Vila Rica</a></p>
+            <p><a href="#mapa2">Centro</a></p>
+            <p><a href="#mapa1">Jardim Alvorada</a></p>
+            <p><a href="#mapa7">Jardim Itacolomi</a></p>
+            <p><a href="#mapa6">Lagoa</a></p>
+            <p><a href="#mapa8">Maria Soares</a></p>
+            <p><a href="#mapa3">Morro da Queimada</a></p>
+            <p><a href="#mapa4">Morro São João</a></p>
+        </div>
+        <div class="coluna">
+            <p><a href="#mapa1">Morro São Sebastião</a></p>
+            <p><a href="#mapa7">Nossa Senhora do Carmo</a></p>
+            <p><a href="#mapa7">Novo Horizonte</a></p>
+            <p><a href="#mapa5">Padre Faria</a></p>
+            <p><a href="#mapa1">Passa Dez (Cima e Baixo)</a></p>
+            <p><a href="#mapa4">Piedade</a></p>
+            <p><a href="#mapa1">Pilar</a></p>
+            <p><a href="#mapa1">Rosário</a></p>
+            <p><a href="#mapa5">Santa Cruz</a></p>
+            <p><a href="#mapa8">Saramenha</a></p>
+            <p><a href="#mapa1">São Cristovão</a></p>
+            <p><a href="#mapa1">São Francisco</a></p>
+            <p><a href="#mapa4">Taquaral</a></p>
+            <p><a href="#mapa8">Tavares</a></p>
+            <p><a href="#mapa6">Vila Aparecida</a></p>
+            <p><a href="#mapa6">Vila dos Engenheiros</a></p>
+            <p><a href="#mapa6">Vila Operária</a></p>
+            <p><a href="#mapa8">Vila Santa Izabel</a></p>
+            <p><a href="#mapa1">Vila São José</a></p>
+        </div>
+    </div>
+
+    <h2 class="direita">Distritos</h2>
+    <div class="sumario" style="position: absolute; top: 120px; left: 875px;">
+    <div class="coluna">
+        <p><a href="#mapa14">Amarantina</a></p>
+        <p><a href="#mapa9">Cachoeira do Campo</a></p>
+        <p><a href="#mapa15">Engenheiro Correia</a></p>
+        <p><a href="#mapa12">Glaura</a></p>
+        <p><a href="#mapa18">Lavras Novas</a></p>
+        <p><a href="#mapa19">Miguel Burnier</a></p>
+        <p><a href="#mapa16">Rodrigo Silva</a></p>
+        <p><a href="#mapa17">Santa Rita de Ouro Preto</a></p>
+        <p><a href="#mapa11">Santo Ântonio do Leite</a></p>
+        <p><a href="#mapa13">Santo Ântonio do Salto</a></p>
+        <p><a href="#mapa10">São Bartolomeu</a></p>
+    </div>
+</div>
+
+    
+    <h2 class="centralizado">Mapas</h2>
+    <div class="mapa" id="mapa1">
+        <h3>Mapa 1</h3>
+        <img src="mapa1.png" alt="Mapa 1">
+        <div class="bairros">
+            <a href="https://docs.google.com/spreadsheets/d/1ZQcR90FsM85UlPPPDmR6ux60KuYqNrQ__8Jpg4x3ivs/edit?hl=pt-br&pli=1&gid=1909247795#gid=1909247795" target="_blank">Água Limpa</a>
+            <a href="https://docs.google.com/spreadsheets/d/1ZQcR90FsM85UlPPPDmR6ux60KuYqNrQ__8Jpg4x3ivs/edit?hl=pt-br&pli=1&gid=1986584908#gid=1986584908" target="_blank">Cabeças</a>
+            <a href="https://docs.google.com/spreadsheets/d/1ZQcR90FsM85UlPPPDmR6ux60KuYqNrQ__8Jpg4x3ivs/edit?hl=pt-br&pli=1&gid=407402520#gid=407402520" target="_blank">Jardim Alvorada</a>
+            <a href="https://docs.google.com/spreadsheets/d/1ZQcR90FsM85UlPPPDmR6ux60KuYqNrQ__8Jpg4x3ivs/edit?hl=pt-br&pli=1&gid=572370055#gid=572370055" target="_blank">Morro São Sebastião</a>
+            <a href="https://docs.google.com/spreadsheets/d/1ZQcR90FsM85UlPPPDmR6ux60KuYqNrQ__8Jpg4x3ivs/edit?hl=pt-br&pli=1&gid=201473076#gid=201473076" target="_blank">Passa Dez (Cima e Baixo)</a>
+            <a href="https://docs.google.com/spreadsheets/d/1ZQcR90FsM85UlPPPDmR6ux60KuYqNrQ__8Jpg4x3ivs/edit?hl=pt-br&pli=1&gid=17454026#gid=17454026" target="_blank">Pilar</a>
+            <a href="https://docs.google.com/spreadsheets/d/1ZQcR90FsM85UlPPPDmR6ux60KuYqNrQ__8Jpg4x3ivs/edit?hl=pt-br&pli=1&gid=639358149#gid=639358149" target="_blank">Rosário</a>
+            <a href="https://docs.google.com/spreadsheets/d/1ZQcR90FsM85UlPPPDmR6ux60KuYqNrQ__8Jpg4x3ivs/edit?hl=pt-br&pli=1&gid=1588141605#gid=1588141605" target="_blank">São Cristovão</a>
+            <a href="https://docs.google.com/spreadsheets/d/1ZQcR90FsM85UlPPPDmR6ux60KuYqNrQ__8Jpg4x3ivs/edit?hl=pt-br&pli=1&gid=201483492#gid=201483492" target="_blank">São Francisco</a>
+            <a href="https://docs.google.com/spreadsheets/d/1ZQcR90FsM85UlPPPDmR6ux60KuYqNrQ__8Jpg4x3ivs/edit?hl=pt-br&pli=1&gid=1945971082#gid=1945971082" target="_blank">Vila São José</a>
+        </div>
+    </div>
+    <div class="mapa" id="mapa2">
+        <h3>Mapa 2</h3>
+        <img src="mapa2.png" alt="Mapa 2">
+        <div class="bairros">
+            <a href="https://docs.google.com/spreadsheets/d/1ZQcR90FsM85UlPPPDmR6ux60KuYqNrQ__8Jpg4x3ivs/edit?hl=pt-br&pli=1&gid=2081143723#gid=2081143723" target="_blank">Centro</a>
+        </div>
+    </div>
+    <div class="mapa" id="mapa3">
+        <h3>Mapa 3</h3>
+        <img src="mapa3.png" alt="Mapa 3">
+        <div class="bairros">
+            <a href="https://docs.google.com/spreadsheets/d/1ZQcR90FsM85UlPPPDmR6ux60KuYqNrQ__8Jpg4x3ivs/edit?hl=pt-br&pli=1&gid=1980244290#gid=1980244290" target="_blank">Alta da Cruz</a>
+            <a href="https://docs.google.com/spreadsheets/d/1ZQcR90FsM85UlPPPDmR6ux60KuYqNrQ__8Jpg4x3ivs/edit?hl=pt-br&pli=1&gid=123830705#gid=123830705" target="_blank">Antônio Dias</a>
+            <a href="https://docs.google.com/spreadsheets/d/1ZQcR90FsM85UlPPPDmR6ux60KuYqNrQ__8Jpg4x3ivs/edit?hl=pt-br&pli=1&gid=1339127157#gid=1339127157" target="_blank">Barra</a>
+            <a href="https://docs.google.com/spreadsheets/d/1ZQcR90FsM85UlPPPDmR6ux60KuYqNrQ__8Jpg4x3ivs/edit?hl=pt-br&pli=1&gid=1709188487#gid=1709188487" target="_blank">Morro da Queimada</a>
+        </div>
+    </div>
+    <div class="mapa" id="mapa4">
+        <h3>Mapa 4</h3>
+        <img src="mapa4.png" alt="Mapa 4">
+        <div class="bairros">
+            <a href="https://docs.google.com/spreadsheets/d/1ZQcR90FsM85UlPPPDmR6ux60KuYqNrQ__8Jpg4x3ivs/edit?hl=pt-br&pli=1&gid=953566863#gid=953566863" target="_blank">Campo Grande de Vila Rica</a>
+            <a href="https://docs.google.com/spreadsheets/d/1ZQcR90FsM85UlPPPDmR6ux60KuYqNrQ__8Jpg4x3ivs/edit?hl=pt-br&pli=1&gid=2087842632#gid=2087842632" target="_blank">Morro São João</a>
+            <a href="https://docs.google.com/spreadsheets/d/1ZQcR90FsM85UlPPPDmR6ux60KuYqNrQ__8Jpg4x3ivs/edit?hl=pt-br&pli=1&gid=1922559281#gid=1922559281" target="_blank">Piedade</a>
+            <a href="https://docs.google.com/spreadsheets/d/1ZQcR90FsM85UlPPPDmR6ux60KuYqNrQ__8Jpg4x3ivs/edit?hl=pt-br&pli=1&gid=143125281#gid=143125281" target="_blank">Taquaral</a>
+        </div>
+    </div>
+    <div class="mapa" id="mapa5">
+        <h3>Mapa 5</h3>
+        <img src="mapa5.png" alt="Mapa 5">
+        <div class="bairros">
+            <a href="https://docs.google.com/spreadsheets/d/1ZQcR90FsM85UlPPPDmR6ux60KuYqNrQ__8Jpg4x3ivs/edit?hl=pt-br&pli=1&gid=876080003#gid=876080003" target="_blank">Alto das Dores</a>
+            <a href="https://docs.google.com/spreadsheets/d/1ZQcR90FsM85UlPPPDmR6ux60KuYqNrQ__8Jpg4x3ivs/edit?hl=pt-br&pli=1&gid=137974588#gid=137974588" target="_blank">Caminho da Fábrica</a>
+            <a href="https://docs.google.com/spreadsheets/d/1ZQcR90FsM85UlPPPDmR6ux60KuYqNrQ__8Jpg4x3ivs/edit?hl=pt-br&pli=1&gid=692862519#gid=692862519" target="_blank">Padre Faria</a>
+            <a href="https://docs.google.com/spreadsheets/d/1ZQcR90FsM85UlPPPDmR6ux60KuYqNrQ__8Jpg4x3ivs/edit?hl=pt-br&pli=1&gid=2057964665#gid=2057964665" target="_blank">Santa Cruz</a>
+        </div>
+    </div>
+    <div class="mapa" id="mapa6">
+        <h3>Mapa 6</h3>
+        <img src="mapa6.png" alt="Mapa 6">
+        <div class="bairros">
+            <a href="https://docs.google.com/spreadsheets/d/1ZQcR90FsM85UlPPPDmR6ux60KuYqNrQ__8Jpg4x3ivs/edit?hl=pt-br&pli=1&gid=19865380#gid=19865380" target="_blank">Bauxita</a>
+            <a href="https://docs.google.com/spreadsheets/d/1ZQcR90FsM85UlPPPDmR6ux60KuYqNrQ__8Jpg4x3ivs/edit?hl=pt-br&pli=1&gid=921158267#gid=921158267" target="_blank">Lagoa</a>
+            <a href="https://docs.google.com/spreadsheets/d/1ZQcR90FsM85UlPPPDmR6ux60KuYqNrQ__8Jpg4x3ivs/edit?hl=pt-br&pli=1&gid=994318995#gid=994318995" target="_blank">Vila Aparecida</a>
+            <a href="https://docs.google.com/spreadsheets/d/1ZQcR90FsM85UlPPPDmR6ux60KuYqNrQ__8Jpg4x3ivs/edit?hl=pt-br&pli=1&gid=855062948#gid=855062948" target="_blank">Vila dos Engenheiros</a>
+            <a href="https://docs.google.com/spreadsheets/d/1ZQcR90FsM85UlPPPDmR6ux60KuYqNrQ__8Jpg4x3ivs/edit?hl=pt-br&pli=1&gid=264916198#gid=264916198" target="_blank">Vila Operária</a>
+        </div>
+    </div>
+    <div class="mapa" id="mapa7">
+        <h3>Mapa 7</h3>
+        <img src="mapa7.png" alt="Mapa 7">
+        <div class="bairros">
+            <a href="https://docs.google.com/spreadsheets/d/1ZQcR90FsM85UlPPPDmR6ux60KuYqNrQ__8Jpg4x3ivs/edit?hl=pt-br&pli=1&gid=1508757685#gid=1508757685" target="_blank">Jardim Itacolomi</a>
+            <a href="https://docs.google.com/spreadsheets/d/1ZQcR90FsM85UlPPPDmR6ux60KuYqNrQ__8Jpg4x3ivs/edit?hl=pt-br&pli=1&gid=1730106739#gid=1730106739" target="_blank">Nossa Senhora do Carmo</a>
+            <a href="https://docs.google.com/spreadsheets/d/1ZQcR90FsM85UlPPPDmR6ux60KuYqNrQ__8Jpg4x3ivs/edit?hl=pt-br&pli=1&gid=1085336164#gid=1085336164" target="_blank">Novo Horizonte</a>
+        </div>
+    </div>
+    <div class="mapa" id="mapa8">
+        <h3>Mapa 8</h3>
+        <img src="mapa8.png" alt="Mapa 8">
+        <div class="bairros">
+            <a href="https://docs.google.com/spreadsheets/d/1ZQcR90FsM85UlPPPDmR6ux60KuYqNrQ__8Jpg4x3ivs/edit?hl=pt-br&pli=1&gid=1138740226#gid=1138740226" target="_blank">Maria Soares</a>
+            <a href="https://docs.google.com/spreadsheets/d/1ZQcR90FsM85UlPPPDmR6ux60KuYqNrQ__8Jpg4x3ivs/edit?hl=pt-br&pli=1&gid=1138740226#gid=1138740226" target="_blank">Saramenha</a>
+            <a href="https://docs.google.com/spreadsheets/d/1ZQcR90FsM85UlPPPDmR6ux60KuYqNrQ__8Jpg4x3ivs/edit?hl=pt-br&pli=1&gid=1138740226#gid=1138740226" target="_blank">Tavares</a>
+            <a href="https://docs.google.com/spreadsheets/d/1ZQcR90FsM85UlPPPDmR6ux60KuYqNrQ__8Jpg4x3ivs/edit?hl=pt-br&pli=1&gid=1138740226#gid=1138740226" target="_blank">Vila Santa Izabel</a>
+        </div> 
+    </div>
+    <div class="mapa" id="mapa9">
+    <h3>Mapa 9 - Cachoeira do Campo</h3>
+    <img src="mapa9.png" alt="Mapa 9 - Cachoeira do Campo">
+    <div class="bairros">
+        <a class="botao-mapa" href="https://docs.google.com/spreadsheets/d/1ZQcR90FsM85UlPPPDmR6ux60KuYqNrQ__8Jpg4x3ivs/edit?hl=pt-br&pli=1&gid=1725441249#gid=1725441249" target="_blank">Ver detalhes de Cachoeira do Campo</a>
+    </div>
+</div>
+
+<div class="mapa" id="mapa10">
+    <h3>Mapa 10 - São Bartolomeu</h3>
+    <img src="mapa10.png" alt="Mapa 10 - São Bartolomeu">
+    <div class="bairros">
+        <a class="botao-mapa" href="https://docs.google.com/spreadsheets/d/1ZQcR90FsM85UlPPPDmR6ux60KuYqNrQ__8Jpg4x3ivs/edit?hl=pt-br&pli=1&gid=1262844032#gid=1262844032" target="_blank">Ver detalhes de São Bartolomeu</a>
+    </div>
+</div>
+
+<div class="mapa" id="mapa11">
+    <h3>Mapa 11 - Santo Ântonio do Leite</h3>
+    <img src="mapa11.png" alt="Mapa 11 - Santo Ântonio do Leite">
+    <div class="bairros">
+        <a class="botao-mapa" href="https://docs.google.com/spreadsheets/d/1ZQcR90FsM85UlPPPDmR6ux60KuYqNrQ__8Jpg4x3ivs/edit?hl=pt-br&pli=1&gid=1377154081#gid=1377154081" target="_blank">Ver detalhes de Santo Ântonio do Leite</a>
+    </div>
+</div>
+
+<div class="mapa" id="mapa12">
+    <h3>Mapa 12 - Glaura</h3>
+    <img src="mapa12.png" alt="Mapa 12 - Glaura">
+    <div class="bairros">
+        <a class="botao-mapa" href="https://docs.google.com/spreadsheets/d/1ZQcR90FsM85UlPPPDmR6ux60KuYqNrQ__8Jpg4x3ivs/edit?hl=pt-br&pli=1&gid=1691650303#gid=1691650303" target="_blank">Ver detalhes de Glaura</a>
+    </div>
+</div>
+
+<div class="mapa" id="mapa13">
+    <h3>Mapa 13 - Santo Ântonio do Salto</h3>
+    <img src="mapa13.png" alt="Mapa 13 - Santo Ântonio do Salto">
+    <div class="bairros">
+        <a class="botao-mapa" href="https://docs.google.com/spreadsheets/d/1ZQcR90FsM85UlPPPDmR6ux60KuYqNrQ__8Jpg4x3ivs/edit?hl=pt-br&pli=1&gid=446391470#gid=446391470" target="_blank">Ver detalhes de Santo Ântonio do Salto</a>
+    </div>
+</div>
+
+<div class="mapa" id="mapa14">
+    <h3>Mapa 14 - Amarantina</h3>
+    <img src="mapa14.png" alt="Mapa 14 - Amarantina">
+    <div class="bairros">
+        <a class="botao-mapa" href="https://docs.google.com/spreadsheets/d/1ZQcR90FsM85UlPPPDmR6ux60KuYqNrQ__8Jpg4x3ivs/edit?hl=pt-br&pli=1&gid=1540965342#gid=1540965342" target="_blank">Ver detalhes de Amarantina</a>
+    </div>
+</div>
+
+<div class="mapa" id="mapa15">
+    <h3>Mapa 15 - Engenheiro Correia</h3>
+    <img src="mapa15.png" alt="Mapa 15 - Engenheiro Correia">
+    <div class="bairros">
+        <a class="botao-mapa" href="https://docs.google.com/spreadsheets/d/1ZQcR90FsM85UlPPPDmR6ux60KuYqNrQ__8Jpg4x3ivs/edit?hl=pt-br&pli=1&gid=1641310890#gid=1641310890" target="_blank">Ver detalhes de Engenheiro Correia</a>
+    </div>
+</div>
+
+<div class="mapa" id="mapa16">
+    <h3>Mapa 16 - Rodrigo Silva</h3>
+    <img src="mapa16.png" alt="Mapa 16 - Rodrigo Silva">
+    <div class="bairros">
+        <a class="botao-mapa" href="https://docs.google.com/spreadsheets/d/1ZQcR90FsM85UlPPPDmR6ux60KuYqNrQ__8Jpg4x3ivs/edit?hl=pt-br&pli=1&gid=1613728223#gid=1613728223" target="_blank">Ver detalhes de Rodrigo Silva</a>
+    </div>
+</div>
+
+<div class="mapa" id="mapa17">
+    <h3>Mapa 17 - Santa Rita de Ouro Preto</h3>
+    <img src="mapa17.png" alt="Mapa 17 - Santa Rita de Ouro Preto">
+    <div class="bairros">
+        <a class="botao-mapa" href="https://docs.google.com/spreadsheets/d/1ZQcR90FsM85UlPPPDmR6ux60KuYqNrQ__8Jpg4x3ivs/edit?hl=pt-br&pli=1&gid=2017153193#gid=2017153193" target="_blank">Ver detalhes de Santa Rita de Ouro Preto</a>
+    </div>
+</div>
+
+<div class="mapa" id="mapa18">
+    <h3>Mapa 18 - Lavras Novas</h3>
+    <img src="mapa18.png" alt="Mapa 18 - Lavras Novas">
+    <div class="bairros">
+        <a class="botao-mapa" href="https://docs.google.com/spreadsheets/d/1ZQcR90FsM85UlPPPDmR6ux60KuYqNrQ__8Jpg4x3ivs/edit?hl=pt-br&pli=1&gid=1855803682#gid=1855803682" target="_blank">Ver detalhes de Lavras Novas</a>
+    </div>
+</div>
+
+<div class="mapa" id="mapa19">
+    <h3>Mapa 19 - Miguel Burnier</h3>
+    <img src="mapa19.png" alt="Mapa 19 - Miguel Burnier">
+    <div class="bairros">
+        <a class="botao-mapa" href="https://docs.google.com/spreadsheets/d/1ZQcR90FsM85UlPPPDmR6ux60KuYqNrQ__8Jpg4x3ivs/edit?hl=pt-br&pli=1&gid=572809260#gid=572809260" target="_blank">Ver detalhes de Miguel Burnier</a>
+    </div>
+    </div>
+</body>
+</html>
